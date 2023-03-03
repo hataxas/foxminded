@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Create Account Form</title>
+</head>
+<body>
+  <form id="account" name="account" action="#">
+    <h1>Create Account</h1>
+    <div class="content">
+      <div class="flex">
+        <div class="field input-field">
+          <label for="first_name">First Name <sup>*</sup></label>
+          <input id="first_name" class="required" type="text" name="first_name" placeholder="enter your first name">
+          <div class="error"></div>
+        </div>
+        <div class="field input-field">
+          <label for="last_name">Last Name</label>
+          <input id="last_name" type="text" name="last_name" placeholder="enter your last name">
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="big-field input-field">
+        <label for="email">Email <sup>*</sup></label>
+        <input id="email" class="required" type="email" name="email" placeholder="enter your email">
+        <div class="error"></div>
+      </div>
+      <div class="flex">
+        <div class="field input-field">
+          <label for="password">Password <sup>*</sup></label>
+          <input id="password" class="required" type="password" name="password" placeholder="enter your password">
+          <div class="error"></div>
+        </div>
+        <div class="field input-field">
+          <label for="confirm_password">Confirm Password <sup>*</sup></label>
+          <input id="confirm_password" class="confirmation required" type="password" name="confirm_password" placeholder="enter your password again">
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="radios-and-checkboxes-wrapper">
+        <div class="radios">
+          <p>Gender:</p>
+          <div class="radios-wrapper">
+            <input type="radio" checked name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <div class="checkboxes">
+          <p>Hobbies:</p>
+          <div class="checkboxes-wrapper">
+            <input type="checkbox" checked name="music" value="yes">
+            <label for="male">Music</label>
+
+            <input type="checkbox" name="sports" value="yes">
+            <label for="female">Sports</label>
+
+            <input type="checkbox" name="travel" value="yes">
+            <label for="female">Travel</label>
+
+            <input type="checkbox" name="movies" value="yes">
+            <label for="female">Movies</label>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="field">
+          <label for="sourse_of_income">Sourse of Income</label>
+          <div class="select-wrapper">
+            <select name="sourse_of_income">
+              <option>Employed</option>
+              <option>Business</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="income">Income</label>
+          <div class="range">
+            <input name="income" type="range" min="5" max="100" step="5" value="20"
+            onchange="document.getElementById('rangeValue').innerHTML = this.value + 'K';">
+            <div id="rangeValue">20K</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="field">
+          <label for="profile_picture">Upload Profile Picture</label>
+          <input type="file" name="profile_picture" placeholder="Choose File">
+        </div>
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="number" name="age" placeholder="enter your age" value="18">
+        </div>
+      </div>
+      <div class="big-field">
+        <label for="bio">Bio</label>
+        <textarea name="bio" rows="5" cols="5"></textarea>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button type="submit">Create</button>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

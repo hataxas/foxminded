@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+  <title>Weather widget</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="search">
+      <input id="city" type="text" name="city" placeholder="Enter city">
+      <div class="button">
+        <div class="cross"></div>
+      </div>
+      <label for id="city">Selected: <span class="selected-city"></span></label>
+    </div>
+    <div class="current-weather">
+      <div class="columns main">
+        <div class="curent-temp">
+          <div class="temp"></div>
+        </div>
+        <div class="curent-feels-like">
+          <span>Feels like</span>
+          <span class="feels-like"></span>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="description"></div>
+        <div class="location">
+          <span class="place"></span>
+        </div>
+      </div>
+      <div class="icon"></div>
+    </div>
+    <div class="few-days-forecast">
+    </div>
+  </div>
+
+  <script src="service.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

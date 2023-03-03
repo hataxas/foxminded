@@ -1,0 +1,2073 @@
+@import "nullstyle.scss";
+@import "fonts.scss";
+
+$boxShadow: 0px 4px 16px rgba(75, 0, 129, 0.26);
+$linearGradien: linear-gradient(to top,#FFFFFF -17.33%, rgba(74, 153, 211, 0) 75.91%), rgba(74, 153, 211, 0.2);
+$white: rgba(255, 255, 255, 1);
+$blue: rgba(74, 153, 211, 1);
+$lightBlue: rgb(109, 192, 250);
+$gray: rgba(128, 128, 128, 0.5);
+$textColor: rgba(15, 0, 26, 1);
+$transition: all 0.2s ease;
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  background-color: $gray;
+}
+
+.wrapper {
+  background-color: $white;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Objective;
+  margin: 0 auto;
+}
+
+header {
+  padding: 20px 20px 60px;
+  background: $linearGradien;
+  box-shadow: $boxShadow;
+
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px;
+  }
+  .logo {
+    color: $blue;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .menu {
+    font-weight: 500;
+    font-size: 12px;
+
+    a {
+      display: inline-block;
+      padding: 0 5px;
+      color: $textColor;
+
+      &:hover {
+        color: $lightBlue;
+      }
+    }
+
+    a.active {
+      color: $blue;
+
+      &:hover {
+        color: $lightBlue;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about {
+    color: rgba(38, 0, 65, 1);
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 20px 0;
+    }
+
+    .links {
+      display: flex;
+    }
+
+    a {
+      display: flex;
+      align-content: center;
+      background-color: $blue;
+      border-radius: 2px;
+      margin-right: 10px;
+      padding: 6px 12px;
+
+      &:hover {
+        background-color: $lightBlue;
+      }
+    }
+
+    img.google-play {
+      display: block;
+      width: 80px;
+    }
+
+    img.app-store {
+      display: block;
+      width: 80px;
+    }
+  }
+
+  .phones-image {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  z-index: 1;
+
+  .description {
+    padding: 40px 20px;
+    position: relative;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(38, 0, 65, 1);
+      text-align: center;
+      padding: 0 0 10px;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 260px;
+    min-height: 360px;
+    box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+    margin: 40px auto 0;
+    padding: 20px;
+
+    .image-1 {
+      width: 170px;
+      height: 160px;
+      margin: -48px auto 0 26px;
+    }
+
+    .image-2 {
+      width: 140px;
+      height: 110px;
+      margin: 0 auto 0 20px;
+    }
+
+    .image-3 {
+      width: 120px;
+      height: 110px;
+      margin: 0 auto 0 40px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+      color: $textColor;
+      padding: 20px 0 10px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+
+    .learn-more {
+      padding: 20px 0 0;
+      font-size: 10px;
+      font-weight: 500;
+
+      a {
+        display: inline-block;
+        transition: $transition;
+        color: $blue;
+
+        &:hover {
+          color: $lightBlue;
+          transition: $transition;
+          transform: scale(105%, 105%);
+        }
+      }
+
+      span {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: -16px;
+          top: 1px;
+          width: 8px;
+          height: 8px;
+          background-size: cover;
+          background-image: url(images/arrow.svg);
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .card-1, .card-2, .card-3 {
+    position: relative;
+    background-color: $white;
+  }
+
+  .card-1::before, .card-2::before, .card-3::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-image: url("images/dots.svg");
+    z-index: -1;
+  }
+
+  .card-1::before {
+    right: -30px;
+    top: -30px;
+  }
+
+  .card-2::before {
+    left: -30px;
+    top: 40%;
+  }
+
+  .card-3::before {
+    right: -30px;
+    bottom: -30px;
+  }
+
+  .description::after, .description::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+  }
+
+  .description::after {
+    background-image: url(images/blue-squares.svg);
+    top: -100px;
+    right: -6px;
+  }
+
+  .description::before {
+    transform: rotate(180deg);
+    background-image: url(images/orange-squares.svg);
+    bottom: -100px;
+    left: -6px;
+    z-index: -1;
+  }
+
+  .instructions {
+    padding: 30px 20px;
+    background-color: rgba(74, 153, 211, 0.1);
+    text-align: center;
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      color: $blue;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+    }
+
+    .item {
+      padding: 20px 0 0;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      h3 {
+        font-size: 12px;
+        font-weight: 500;
+        color: $textColor;
+        padding: 10px 0;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .feedbacks {
+    padding: 20px 0;
+    position: relative;
+
+    h2 {
+      font-size: 14px;
+      font-weight: bold;
+      color: $textColor;
+      text-align: center;
+      padding: 10px 0 20px;
+    }
+
+    .carousel {
+      position: relative;
+      padding-top: 300px;
+    }
+
+    .viewport {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      display: inline-block;
+      position: relative;
+      display: flex;
+      flex: 0 0 auto;
+      flex-direction: row;
+      width: 100%;
+      padding: 20px 20px 60px 0;
+    }
+
+    .photo {
+      width: 160px;
+      flex: 1 0 auto;
+      background-color: rgba(74, 153, 211, 0.1);
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 180px;
+        height: 110%;
+        bottom: 0;
+        left: 10px;
+        background-image: url("images/photo-1.png");
+        background-size: cover;
+        z-index: 1;
+      }
+    }
+
+    .feedback {
+      padding: 0 0 0 30px;
+      overflow-y: auto;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      p {
+        font-size: 10px;
+        line-height: 1.4;
+        padding: 10px 0 0;
+      }
+
+      h3 {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 10px 0 0;
+      }
+    }
+
+    .carousel::before,
+    .carousel::after,
+    .prev,
+    .next {
+      position: absolute;
+      bottom: 0px;
+      width: 30px;
+      height:  30px;
+      border-radius: 2px;
+      font-size: 0;
+      outline: 0;
+    }
+
+    .carousel::before,
+    .prev {
+      right: 50px;
+    }
+
+    .carousel::after,
+    .next {
+      right: 20px;
+    }
+
+    .carousel::before,
+    .carousel::after {
+      content: '';
+      z-index: 1;
+      bottom: 15px;
+      background-size: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+    }
+
+    .carousel::before {
+      background-color: $blue;
+      background-image: url("images/arrow-left.svg");
+    }
+
+    .carousel::after {
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+      background-image: url("images/arrow-right.svg");
+    }
+  }
+
+  .feedbacks::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    background-size: contain;
+    background-image: url(images/dots.svg);
+    top: -36px;
+    right: -20px;
+    z-index: 0;
+  }
+
+  .download {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 80px;
+
+    img {
+      width: 200px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 20px 10px 10px;
+      text-align: center;
+      color: $textColor;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.4;
+      color: $textColor;
+      opacity: 0.5;
+      text-align: center;
+
+    }
+    .links {
+      display: flex;
+      padding: 20px 0 0;
+      justify-content: center;
+
+      img {
+        width: 100px;
+      }
+
+      a {
+        margin: 0 10px 0 0;
+        transition: $transition;
+
+        &:hover {
+          transition: $transition;
+          transform: scale(107%, 107%);
+        }
+      }
+
+    }
+  }
+
+  .download::after, .download::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    background-size: contain;
+  }
+
+  .download::after {
+    transform: rotate(180deg);
+    background-image: url(images/blue-squares.svg);
+    bottom: -50px;
+    left: -20px;
+  }
+
+  .download::before {
+    background-image: url(images/orange-squares.svg);
+    bottom: -50px;
+    right: -20px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $blue;
+  color: $white;
+  z-index: 1;
+
+  section {
+    display: flex;
+  }
+
+  .additional-information {
+    flex-direction: column;
+    padding: 20px 20px 10px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 0 0;
+
+    h2 {
+      font-size: 12px;
+      text-decoration: underline;
+      padding: 14px 0 5px;
+    }
+
+    a {
+      display: inline-block;
+      color: $white;
+      padding: 10px 0 0;
+      transition: $transition;
+
+      &:hover {
+        transition: $transition;
+        color: $textColor;
+      }
+    }
+  }
+
+  .logo {
+    color: $white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  form {
+    padding: 30px 0 20px;
+
+    p {
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 0 0 10px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 12px;
+      border-radius: 2px;
+      margin-right: 5px;
+    }
+
+    button {
+      color: $blue;
+      background-color: $white;
+      padding: 8px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 2px;
+      transition: $transition;
+
+      &:hover {
+        transition: $transition;
+        color: $lightBlue;
+        transform: scale(110%, 110%);
+      }
+    }
+  }
+
+  .follow-us {
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $white;
+    padding: 10px 20px;
+    font-size: 8px;
+
+    a {
+      margin: 0 8px 0 0;
+    }
+
+    img {
+      width: 20px;
+      height: 16px;
+      transition: $transition;
+
+      &:hover {
+        transition: $transition;
+        transform: scale(110%, 110%);
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  header {
+    padding: 30px 40px 45px;
+
+    .main-menu {
+      padding: 0 0 40px;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .menu {
+      font-size: 14px;
+
+      a {
+        padding: 0 0 0 20px;
+      }
+    }
+
+    .content {
+      flex-direction: row;
+    }
+
+    .about {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 14px 32px 40px 0;
+      }
+
+      a {
+        border-radius: 4px;
+        margin-right: 20px;
+        padding: 8px 16px;
+      }
+
+      img.google-play {
+        width: 100px;
+      }
+
+      img.app-store {
+        width: 100px;
+      }
+    }
+  }
+
+  main {
+    .description {
+      padding: 50px 40px 60px;
+
+      h2 {
+        font-size: 22px;
+        line-height: 1.4;
+      }
+    }
+
+    .card {
+      max-width: 320px;
+      min-height: 420px;
+      margin: 0;
+      padding: 30px;
+
+      .image-1 {
+        width: 200px;
+        height: 166px;
+        margin: -46px auto 20px 34px;
+      }
+
+      .image-2 {
+        width: 162px;
+        height: 112px;
+        margin: 0 auto 20px 32px;
+      }
+
+      .image-3 {
+        width: 146px;
+        height: 121px;
+        margin: 0 auto 20px 50px;
+      }
+
+      h3 {
+        font-size: 18px;
+        padding: 20px 0 16px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .learn-more {
+        padding: 20px 0 0;
+        font-size: 12px;
+
+        span::after {
+          right: -20px;
+          top: 0;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .card-1, .card-2, .card-3 {
+      margin: 40px auto 0;
+    }
+
+    .card-1::before, .card-2::before, .card-3::before {
+      width: 110px;
+      height: 110px;
+    }
+
+    .card-1::before {
+      right: -34px;
+      top: -34px;
+    }
+
+    .card-2::before {
+      left: -55px;
+      top: 36%;
+    }
+
+    .card-3::before {
+      right: -34px;
+      bottom: -34px;
+    }
+
+    .description::after, .description::before {
+      width: 120px;
+      height: 120px;
+    }
+
+    .description::after {
+      top: -120px;
+    }
+
+    .description::before {
+      bottom: -120px;
+    }
+
+    .instructions {
+      padding: 60px 40px;
+
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .items {
+        padding: 10px 0 0;
+      }
+
+      .item {
+        padding: 30px 0 0;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        h3 {
+          font-size: 16px;
+          padding: 20px 0 10px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .feedbacks {
+      padding: 40px 0;
+
+      h2 {
+        font-size: 20px;
+        padding: 10px 0 40px;
+      }
+
+      .slide {
+        padding: 20px 40px 40px 0;
+      }
+
+      .feedback {
+        padding: 0 0 0 40px;
+
+        p {
+          font-size: 12px;
+          line-height: 1.4;
+        }
+
+        h3 {
+          padding: 16px 0 0;
+        }
+      }
+
+      .carousel::before,
+      .carousel::after,
+      .prev,
+      .next {
+        position: absolute;
+        bottom: 0;
+        width: 30px;
+        height:  30px;
+      }
+
+      .carousel::before,
+      .prev {
+        right: 80px;
+      }
+
+      .carousel::after,
+      .next {
+        right: 50px;
+      }
+    }
+
+    .feedbacks::after {
+      width: 120px;
+      height: 120px;
+      top: -36px;
+      right: 0;
+    }
+
+    .download {
+      padding: 30px 40px 70px;
+
+      img {
+        width: 300px;
+      }
+
+      h2 {
+        font-size: 20px;
+        padding: 40px 10px 20px;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 1.4;
+
+      }
+      .links {
+        padding: 30px 0 0;
+
+        img {
+          width: 100px;
+        }
+
+        a {
+          margin: 0 8px;
+        }
+      }
+    }
+
+    .download::after, .download::before {
+      width: 120px;
+      height: 120px;
+    }
+
+    .download::after {
+      bottom: -50px;
+      left: -10px;
+    }
+
+    .download::before {
+      bottom: -50px;
+      right: -10px;
+    }
+  }
+
+  footer {
+    .additional-information {
+      padding: 30px 40px 28px 40px;
+    }
+
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    nav {
+      font-size: 12px;
+    }
+
+    .links {
+      padding: 0 0 0 30px;
+
+      h2 {
+        font-size: 14px;
+        padding: 0 0 5px;
+      }
+
+      a {
+        padding: 10px 0 0;
+      }
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    form {
+      padding: 30px 0 0;
+
+      p {
+        font-size: 12px;
+        padding: 0 0 10px;
+      }
+
+      input {
+        padding: 10px 8px;
+        font-size: 12px;
+        margin-right: 10px;
+        min-width: 300px;
+      }
+
+      button {
+        padding: 10px 8px;
+        font-size: 12px;
+      }
+    }
+
+    .follow-us {
+      padding: 14px 40px;
+
+      a {
+        margin: 0 8px 0 0;
+      }
+
+      img {
+        width: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 35px 60px 60px;
+
+    .main-menu {
+      padding: 0 0 70px;
+    }
+
+    .logo {
+      font-size: 28px;
+    }
+
+    .menu {
+      font-size: 14px;
+
+      a {
+        padding: 0 0 0 16px;
+      }
+    }
+
+    .content {
+      flex-direction: row;
+    }
+
+    .about {
+      h1 {
+        font-size: 26px;
+        max-width: 76%;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 10px 26px 30px 0;
+      }
+
+      a {
+        border-radius: 3px;
+        margin-right: 12px;
+        padding: 8px 18px;
+      }
+
+      img.google-play {
+        width: 80px;
+      }
+
+      img.app-store {
+        width: 80px;
+      }
+    }
+
+    .phones-image {
+      display: block;
+      margin: -54px -40px 0 0;
+
+      img {
+        width: 300px;
+      }
+    }
+  }
+
+  main {
+    .description {
+      padding: 110px 60px 100px;
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      h2 {
+        width: 42%;
+        font-size: 22px;
+        line-height: 1.4;
+        text-align: start;
+      }
+    }
+
+    .card {
+      max-width: 320px;
+      min-height: 420px;
+      margin: 0;
+      padding: 30px;
+
+      .image-1 {
+        width: 200px;
+        height: 166px;
+        margin: -46px auto 20px 34px;
+      }
+
+      .image-2 {
+        width: 162px;
+        height: 112px;
+        margin: 0 auto 20px 32px;
+      }
+
+      .image-3 {
+        width: 146px;
+        height: 121px;
+        margin: 0 auto 20px 50px;
+      }
+
+      h3 {
+        font-size: 18px;
+        padding: 20px 0 16px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .learn-more {
+        padding: 20px 0 0;
+        font-size: 12px;
+
+        span::after {
+          right: -20px;
+          top: 0;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .card-1, .card-2, .card-3 {
+      display: flex;
+    }
+
+    .card-1 {
+      align-self: flex-end;
+      margin: -68px 0 0;
+    }
+
+    .card-2 {
+      margin: -240px 0 0;
+    }
+
+    .card-3 {
+      align-self: flex-end;
+      margin: -160px 0 0;
+    }
+
+    .description::after, .description::before {
+      width: 120px;
+      height: 120px;
+    }
+
+    .description::after {
+      top: 0;
+      right: -10px;
+    }
+
+    .description::before {
+      bottom: 0;
+      left: -10px;
+      z-index: 1;
+    }
+
+    .instructions {
+      padding: 60px;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .items {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px 0 0;
+      }
+
+      .item {
+        padding: 0 30px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        h3 {
+          font-size: 16px;
+          padding: 20px 0 10px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .feedbacks {
+      padding: 60px 0;
+      position: relative;
+
+      h2 {
+        font-size: 20px;
+        padding: 0;
+      }
+
+      .carousel {
+        padding-top: 500px;
+      }
+
+      .slide {
+        padding: 80px 40px 60px 0;
+      }
+
+      .photo {
+        width: 400px;
+
+        &::after {
+          width: 300px;
+          height: 380px;
+          left: 50px;
+        }
+      }
+
+      .feedback {
+        padding: 40px 0 0 40px;
+
+        img {
+          width: 40px;
+          height: 36px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 1.4;
+          padding: 20px 0 0;
+        }
+
+        h3 {
+          font-size: 14px;
+          padding: 30px 0 0;
+        }
+      }
+
+      .carousel::before,
+      .carousel::after,
+      .prev,
+      .next {
+        width: 50px;
+        height:  50px;
+        border-radius: 3px 0px 0px 3px;
+      }
+
+      .carousel::before,
+      .prev {
+        right: 100px;
+      }
+
+      .carousel::after,
+      .next {
+        right: 50px;
+      }
+
+      .carousel::before,
+      .carousel::after {
+        bottom: 17px;
+      }
+    }
+
+    .feedbacks::after {
+      width: 110px;
+      height: 110px;
+      top: 100px;
+      right: 0;
+    }
+
+    .download {
+      flex-direction: row;
+      align-items: center;
+      padding: 40px 60px 100px;
+
+      img {
+        width: 300px;
+      }
+
+      div {
+        padding: 0 0 0 40px;
+      }
+
+      h2 {
+        font-size: 20px;
+        padding: 10px 10px 20px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.4;
+
+      }
+      .links {
+        padding: 30px 0 0;
+
+        img {
+          width: 100px;
+        }
+
+        a {
+          margin: 0 6px;
+        }
+
+      }
+    }
+
+    .download::after, .download::before {
+      width: 120px;
+      height: 120px;
+    }
+
+    .download::after {
+      bottom: -40px;
+      left: -10px;
+    }
+
+    .download::before {
+      bottom: -40px;
+      right: -10px;
+    }
+  }
+
+  footer {
+    .additional-information {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 57px 40px 28px;
+    }
+
+    .navbar {
+      flex: 1 0 auto;
+      justify-content: space-between;
+    }
+
+    nav {
+      font-size: 12px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 20px;
+
+      h2 {
+        font-size: 14px;
+        padding-bottom: 5px;
+      }
+
+      a {
+        padding: 14px 0 0;
+      }
+    }
+
+    .logo {
+      font-size: 26px;
+    }
+
+    form {
+      padding: 0 0 0 50px;
+      max-width: 44%;
+
+      p {
+        font-size: 14px;
+        padding: 0 0 14px;
+      }
+
+      input {
+        padding: 10px 8px;
+        font-size: 12px;
+        border-radius: 3px;
+        margin-right: 10px;
+        min-width: 10px;
+      }
+
+      button {
+        padding: 10px 8px;
+        font-size: 12px;
+        border-radius: 3px;
+      }
+    }
+
+    .follow-us {
+      padding: 18px 60px;
+      font-size: 10px;
+
+      a {
+        margin: 0 8px 0 0;
+      }
+
+      img {
+        width: 22px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    padding: 40px 80px 60px;
+
+    .main-menu {
+      padding: 0 0 100px;
+    }
+
+    .logo {
+      font-size: 32px;
+    }
+
+    .menu {
+      font-size: 16px;
+
+      a {
+        padding: 0 0 0 20px;
+      }
+    }
+
+    .about {
+      h1 {
+        font-size: 32px;
+        line-height: 1.4;
+        max-width: 76%;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 20px 40px 40px 0;
+      }
+
+      a {
+        border-radius: 4px;
+        margin-right: 16px;
+        padding: 10px 20px;
+      }
+
+      img.google-play {
+        width: 100px;
+      }
+
+      img.app-store {
+        width: 100px;
+      }
+    }
+
+    .phones-image {
+      margin: -80px -60px 0 0;
+
+      img {
+        width: 400px;
+      }
+    }
+  }
+
+  main {
+    .description {
+      padding: 160px 80px;
+
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        width: 35%;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: start;
+      }
+    }
+
+    .card {
+      max-width: 380px;
+      min-height: 525px;
+      margin: 0;
+      padding: 48px;
+
+      .image-1 {
+        width: 224px;
+        height: 197px;
+        margin: -76px auto 20px 34px;
+      }
+
+      .image-2 {
+        width: 182px;
+        height: 132px;
+        margin: -20px auto 20px 22px;
+      }
+
+      .image-3 {
+        width: 156px;
+        height: 131px;
+        margin: -20px auto 20px 50px;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        padding: 20px 0 16px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+
+      }
+
+      .learn-more {
+        padding: 40px 0 0;
+        font-size: 14px;
+
+        span::after {
+          right: -30px;
+          top: -1px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .card-1, .card-2, .card-3 {
+      display: flex;
+    }
+
+    .card-1 {
+      align-self: flex-end;
+      margin: -126px 0 0;
+    }
+
+    .card-2 {
+      margin: -240px 0 0;
+    }
+
+    .card-3 {
+      align-self: flex-end;
+      margin: -200px 0 0 0;
+    }
+
+    .card-1::before, .card-2::before, .card-3::before {
+      width: 134px;
+      height: 134px;
+    }
+
+    .card-1::before {
+      right: -64px;
+      top: -64px;
+    }
+
+    .card-2::before {
+      left: -88px;
+      top: 36%;
+    }
+
+    .card-3::before {
+      right: -64px;
+      bottom: -64px;
+    }
+
+    .description::after, .description::before {
+      width: 198px;
+      height: 198px;
+    }
+
+    .description::after {
+      top: 0;
+      right: -10px;
+    }
+
+    .description::before {
+      bottom: 0;
+      left: -10px;
+      z-index: 1;
+    }
+
+    .instructions {
+      padding: 80px 60px;
+
+      h2 {
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      .items {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 91px 0 0;
+      }
+
+      .item {
+        padding: 0 40px;
+
+        img {
+          width: 57px;
+          height: 57px;
+        }
+
+        h3 {
+          font-size: 18px;
+          padding: 33px 0 10px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .feedbacks {
+      padding: 80px 0;
+      position: relative;
+
+      h2 {
+        font-size: 26px;
+        padding: 0;
+      }
+
+      .carousel {
+        padding-top: 580px;
+      }
+
+      .slide {
+        padding: 80px 90px 60px 0;
+      }
+
+      .photo {
+        width: 500px;
+
+        &::after {
+          width: 386px;
+          height: 500px;
+          left: 60px;
+        }
+      }
+
+      .feedback {
+        padding: 60px 0 0 60px;
+
+        p {
+          font-size: 14px;
+          line-height: 1.4;
+          padding: 30px 0 0;
+        }
+
+        h3 {
+          font-size: 16px;
+          padding: 40px 0 0;
+        }
+      }
+
+      .carousel::before,
+      .carousel::after,
+      .prev,
+      .next {
+        width: 60px;
+        height:  60px;
+      }
+
+      .carousel::before,
+      .prev {
+        right: 140px;
+      }
+
+      .carousel::after,
+      .next {
+        right: 80px;
+      }
+    }
+
+    .feedbacks::after {
+      width: 134px;
+      height: 134px;
+      top: 100px;
+      right: 0;
+    }
+
+    .download {
+      flex-direction: row;
+      align-items: center;
+      padding: 40px 60px 180px;
+
+      img {
+        width: 460px;
+      }
+
+      div {
+        padding: 0 0 0 60px;
+      }
+
+      h2 {
+        font-size: 26px;
+        padding: 20px 10px 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .links {
+        padding: 40px 0 0;
+
+        img {
+          width: 136px;
+        }
+
+        a {
+          margin: 0 14px;
+        }
+      }
+    }
+
+    .download::after, .download::before {
+      width: 198px;
+      height: 198px;
+    }
+
+    .download::after {
+      bottom: -50px;
+      left: -10px;
+    }
+
+    .download::before {
+      bottom: -50px;
+      right: -10px;
+    }
+  }
+
+  footer {
+    .additional-information {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 40px 60px 28px;
+    }
+
+    nav {
+      font-size: 14px;
+    }
+
+    .links {
+      padding: 0 0 0 40px;
+
+      h2 {
+        font-size: 16px;
+        padding-bottom: 5px;
+      }
+
+      a {
+        padding: 14px 0 0;
+      }
+    }
+
+    .logo {
+      font-size: 30px;
+    }
+
+    form {
+      padding: 0 0 0 70px;
+
+      p {
+        font-size: 14px;
+        padding: 0 0 16px;
+      }
+
+      input {
+        padding: 12px 10px;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 12px 10px;
+        font-size: 14px;
+      }
+    }
+
+    .follow-us {
+      padding: 20px 80px;
+      font-size: 12px;
+
+      a {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 45px 140px 75px;
+
+    .main-menu {
+      padding: 0 0 100px;
+    }
+
+    .logo {
+      font-size: 40px;
+    }
+
+    .menu {
+      font-size: 18px;
+
+      a {
+        padding: 0 0 0 20px;
+      }
+    }
+
+    .about {
+      h1 {
+        font-size: 40px;
+        max-width: 76%;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.8;
+        padding: 14px 32px 60px 0;
+      }
+
+      a {
+        border-radius: 5px;
+        margin-right: 20px;
+        padding: 14px 22px;
+      }
+
+      img.google-play {
+        width: 134px;
+        height: 31px;
+      }
+
+      img.app-store {
+        width: 127px;
+        height: 34px;
+      }
+    }
+
+    .phones-image {
+      display: block;
+      margin: 0 -90px 0 0;
+
+      img {
+        width: 441px;
+        height: 534px;
+      }
+    }
+  }
+
+  main {
+    .description {
+      padding: 160px 140px;
+    }
+
+    .instructions {
+      padding: 80px;
+    }
+
+    .feedbacks {
+      padding: 100px 0 80px;
+
+      h2 {
+        font-size: 26px;
+        padding: 0;
+      }
+
+      .carousel {
+        padding-top: 600px;
+      }
+
+      .slide {
+        padding: 130px 140px 60px 0;
+      }
+
+      .photo {
+        width: 600px;
+
+        &::after {
+          width: 399px;
+          height: 519px;
+          left: 100px;
+        }
+      }
+
+      .feedback {
+        padding: 40px 0 0 100px;
+
+        img {
+          width: 50px;
+          height: 43px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.6;
+          padding: 43px 0 0;
+        }
+
+        h3 {
+          font-size: 18px;
+          padding: 40px 0 0;
+        }
+      }
+
+      .carousel::before,
+      .carousel::after,
+      .prev,
+      .next {
+        width: 60px;
+        height:  60px;
+        border-radius: 4px 0px 0px 4px;
+      }
+
+      .carousel::before,
+      .prev {
+        right: 200px;
+      }
+
+      .carousel::after,
+      .next {
+        right: 140px;
+      }
+    }
+
+    .feedbacks::after {
+      width: 134px;
+      height: 134px;
+      top: 250px;
+      right: 0;
+    }
+
+    .download {
+      padding: 50px 140px 123px;
+    }
+  }
+
+  footer {
+    .additional-information {
+      padding: 57px 80px 28px 124px;
+    }
+
+    .links {
+      padding: 0 0 0 60px;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      a {
+        padding: 18px 0 0;
+      }
+    }
+
+    .logo {
+      font-size: 34px;
+    }
+
+    form {
+      padding: 0 0 0 60px;
+
+      p {
+        font-size: 18px;
+        padding: 0 0 20px;
+      }
+
+      input {
+        padding: 18px 12px;
+        font-size: 14px;
+        border-radius: 3px;
+        margin-right: 10px;
+        min-width: 64%;
+      }
+
+      button {
+        padding: 18px 16px;
+        font-size: 16px;
+        border-radius: 3px;
+      }
+    }
+
+    .follow-us {
+      padding: 23px 124px;
+      font-size: 10px;
+
+      a {
+        margin: 0 10px 0 0;
+      }
+
+      img {
+        width: 22px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  header {
+    padding: 45px 245px 75px;
+
+    .phones-image {
+      margin: 0 -160px 0 0;
+    }
+  }
+
+  main {
+    .description {
+      padding: 150px 245px;
+
+      .container {
+        max-width: 860px;
+      }
+
+      h2 {
+        width: 45%;
+      }
+    }
+
+    .card-1 {
+      margin: -80px 0 0;
+    }
+
+    .card-2 {
+      margin: -220px 0 0;
+    }
+
+    .card-3 {
+      margin: -230px 0 0;
+    }
+
+    .instructions {
+      padding: 95px 245px;
+    }
+
+    .feedbacks {
+      .slide {
+        padding: 130px 235px 60px 0;
+      }
+
+      .photo {
+        width: 677px;
+
+        &::after {
+          width: 399px;
+          height: 519px;
+          left: 178px;
+        }
+      }
+
+      .carousel::before,
+      .prev {
+        right: 300px;
+      }
+
+      .carousel::after,
+      .next {
+        right: 240px;
+      }
+    }
+
+    .download {
+      padding: 60px 167px 123px;
+
+      img {
+        width: 516px;
+      }
+
+    }
+  }
+
+  footer {
+    .additional-information {
+      padding: 55px 124px 28px;
+
+      .logo {
+        padding: 0 85px 0 0;
+      }
+
+      form {
+        padding: 0 0 0 79px;
+      }
+
+      input {
+        min-width: 68%;
+      }
+    }
+
+    .follow-us {
+      padding: 23px 124px;
+    }
+  }
+}

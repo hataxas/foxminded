@@ -1,0 +1,167 @@
+@import "nullstyle.scss";
+
+$gold: rgb(179, 151, 78);
+
+html, body {
+  height: 100vh;
+}
+
+.wrapper {
+  height: 100%;
+  max-width: 1300px;
+  overflow-y: auto;
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  padding: 20px 12px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  h1 {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .line {
+    width: 50px;
+    height: 2px;
+    background-color: $gold;
+    margin: 14px auto 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0 10px;
+  }
+
+  button {
+    background-color: white;
+    color: $gold;
+    border: 1px solid $gold;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin: 3px 3px;
+    box-shadow: 1px 1px 1px black;
+
+    &:hover, &.active {
+      background-color: $gold;
+      color: white;
+    }
+  }
+}
+
+main {
+  .items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0 0;
+
+    .image {
+      display: flex;
+      flex: 1 0 auto;
+      width: 120px;
+      height: 160px;
+      margin: 5px 0 0;
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+      border: 2px solid $gold;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 10px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $gold;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 0 0 5px;
+      letter-spacing: 1px;
+
+      .cost {
+        color: $gold;
+      }
+    }
+
+    .description {
+      padding: 10px 0 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 50px 0;
+  }
+
+  header {
+    h1 {
+      font-size: 30px;
+    }
+
+    .line {
+      width: 60px;
+      margin: 18px auto 10px;
+    }
+
+    nav {
+      padding: 24px 0 10px;
+    }
+
+    button {
+      padding: 4px 12px;
+      font-size: 14px;
+      margin: 0 8px;
+    }
+  }
+
+  main {
+    padding: 20px 10px;
+
+    .item {
+      width: 50%;
+      padding: 30px 12px 0;
+
+      .image {
+        width: 150px;
+        height: 200px;
+      }
+
+      .content {
+        padding: 0 0 0 12px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .title {
+        font-size: 16px;
+        padding: 0 0 7px;
+      }
+
+      .description {
+        padding: 14px 0 0;
+      }
+    }
+  }
+}

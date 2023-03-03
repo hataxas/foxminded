@@ -1,0 +1,16 @@
+.user {
+  display: block;
+  text-align: start;
+  padding: 0 0 20px;
+  font-size: 12px;
+  line-height: 1.4;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  width: 90px;
+}
+
+.name {
+  font-weight: bold;
+  padding: 0 0 2px;
+}

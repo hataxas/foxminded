@@ -1,0 +1,20 @@
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(239, 238, 238);
+}
+
+.tab {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 14px;
+  background-color: rgb(239, 238, 238);
+  font-size: 14px;
+}
+
+.active {
+  background-color: white;
+  border-top: 1px solid rgb(239, 238, 238);
+  border-right: 1px solid rgb(239, 238, 238);
+}

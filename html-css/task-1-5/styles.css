@@ -1,0 +1,80 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-parallax {
+  z-index: 2;
+  background-size: 100%;
+}
+
+section h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.winter::after {
+  background-image: url("images/winter.jpeg");
+  background-size: cover;
+}
+
+.summer::after {
+  background-image: url("images/summer.jpeg");
+  background-size: cover;
+}
+
+.spring {
+  background-image: url("images/spring.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  text-transform: uppercase;
+  color: rgb(86, 2, 86);
+}
+
+.autumn {
+  background-image: url("images/autumn.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(1, 41, 1);
+}
+
+.winter {
+  color: rgb(60, 139, 249);
+  text-transform: lowercase;
+}
+
+.summer {
+  color: rgb(194, 68, 22);
+  text-decoration: underline;
+}

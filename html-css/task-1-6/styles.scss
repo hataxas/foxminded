@@ -1,0 +1,113 @@
+@import "nullstyle.scss";
+
+$sidebarBackgroundColor: rgb(236, 235, 235);
+$sidebarBorderColor: rgb(181, 179, 179);
+$exampleBackgroundColor: rgb(231, 229, 229);
+$gray: rgb(220, 219, 219);
+$red: rgb(251, 67, 67);
+
+html, body {
+  height: 100vh;
+}
+
+a,
+a:visited {
+  color: black;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 0 10px;
+}
+
+a:hover {
+  color: $sidebarBorderColor;
+  text-decoration: underline;
+}
+
+.wrapper {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+nav {
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 10px 0;
+  background-color: $sidebarBackgroundColor;
+  border-right: 2px solid $sidebarBorderColor;
+
+  ul {
+    padding: 10px 0 0;
+  }
+
+  li {
+    font-weight: 600;
+    padding: 10px;
+    border-top: 1px solid $gray;
+  }
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+  margin-left: 200px;
+  padding: 0px 20px 20px;
+}
+
+section {
+  padding: 0 0 20px;
+}
+
+.content {
+  ul {
+    padding: 0 0 0 20px;
+  }
+
+  li {
+    padding: 10px 0 0;
+  }
+
+  p {
+    padding: 10px 0 0;
+    line-height: 1.4;
+  }
+}
+
+.example {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: $exampleBackgroundColor;
+
+  h3 {
+    font-size: 16px;
+  }
+
+  div {
+    padding: 10px 0;
+  }
+}
+
+.red {
+  color: $red;
+  background-color: $exampleBackgroundColor;
+  padding: 0 3px;
+  border-radius: 1px;
+}

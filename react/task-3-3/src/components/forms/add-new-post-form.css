@@ -1,0 +1,23 @@
+.new-post {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 24px;
+  }
+
+  input {
+    padding: 4px 6px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  textarea {
+    resize: vertical;
+    padding: 4px 6px;
+    margin: 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  button {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 4px 6px;
+  }

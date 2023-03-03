@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Carousel</title>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="carousel" aria-label="Gallery">
+      <ol class="carousel__viewport">
+        <li id="slide1" class="carousel__slide">
+          <a href="#slide3" class="carousel__prev">
+            Go to last slide
+          </a>
+          <a href="#slide2" class="carousel__next">
+            Go to next slide
+          </a>
+        </li>
+        <li id="slide2"class="carousel__slide">
+          <a href="#slide1" class="carousel__prev">
+            Go to previous slide
+          </a>
+          <a href="#slide3" class="carousel__next">
+            Go to next slide
+          </a>
+        </li>
+        <li id="slide3" class="carousel__slide">
+          <a href="#slide2" class="carousel__prev">
+            Go to previous slide
+          </a>
+          <a href="#slide1" class="carousel__next">
+            Go to first slide
+          </a>
+        </li>
+      </ol>
+      <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+          <li class="carousel__navigation-item">
+            <a href="#slide1" class="carousel__navigation-button">
+              Go to slide 1
+            </a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#slide2" class="carousel__navigation-button active">
+              Go to slide 2
+            </a>
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#slide3" class="carousel__navigation-button">
+              Go to slide 3
+            </a>
+          </li>
+        </ol>
+      </aside>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+$bg: linear-gradient(to top, rgb(0, 0, 0), rgb(43, 42, 42));
+$pacmanColor: rgb(233, 206, 3);
+$circleColor: white;
+
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  background: $bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.wrapper {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+}
+
+.pacman {
+  display: flex;
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 2;
+  animation: pacman 0.8s linear infinite forwards;
+}
+
+.food {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 auto;
+  transform: translateX(0px);
+  animation: food 0.8s linear infinite forwards;
+}
+
+.circle {
+  display: flex;
+  width: 11px;
+  height: 11px;
+  background-color: $circleColor;
+  border-radius: 50%;
+}
+
+@media (min-width: 800px) {
+  .wrapper {
+    width: 600px;
+  }
+  .pacman {
+    width: 70px;
+    height: 70px;
+  }
+  .circle {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@keyframes food {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-14%);
+  }
+}
+
+@keyframes pacman {
+  0% {
+    background: conic-gradient($pacmanColor 55deg, transparent 56deg 124deg, $pacmanColor 125deg);
+  }
+  100% {
+    background: conic-gradient($pacmanColor 86deg, transparent 87deg 93deg, $pacmanColor 94deg);
+  }
+}

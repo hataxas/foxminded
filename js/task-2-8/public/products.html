@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="styles/styles.css" rel="stylesheet">
+  <title>Products</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Products</li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="logo">comfy</div>
+        <div class="cart-icon">
+          <a href="#"><img src="images/cart-black.svg"></a>
+          <div class="counter">0</div>
+        </div>
+      </nav>
+    </header>
+    <div class="path">Home/Products</div>
+    <main class="products-main">
+      <div class="container">
+        <div class="filters">
+          <input type="text" name="search" placeholder="Search..." id="search">
+          <h2>Company</h2>
+          <ul class="companies">
+            <li>
+              <input type="checkbox" class="company" checked id="all" name="company" value="all">
+              <label for="all">All</label>
+            </li>
+            <li>
+              <input type="checkbox" class="company" id="ikea" name="company" value="ikea">
+              <label for="ikea">Ikea</label>
+            </li>
+            <li>
+              <input type="checkbox" class="company" id="jysk" name="company" value="jysk">
+              <label for="jysk">Jysk</label>
+            </li>
+            <li>
+              <input type="checkbox" class="company" id="xxxlutz" name="company" value="xxxlutz">
+              <label for="xxxlutz">XXXLutz</label>
+            </li>
+            <li>
+              <input type="checkbox" class="company" id="furniturebox" name="company" value="furniturebox">
+              <label for="furniturebox">Furniturebox</label>
+            </li>
+          </ul>
+          <h2>Price</h2>
+          <div class="price">
+            <input name="price" id="price" type="range" min="0" max="2000" step="1" value="2000">
+            <div class="value">Value:<span id="rangeValue">$2000</span></div>
+          </div>
+        </div>
+        <div class="items"></div>
+      </div>
+    </main>
+  </div>
+  <div class="cart">
+    <div class="column">
+      <div class="cross"></div>
+      <h2>Your Bag</h2>
+      <ul class="products-list"></ul>
+    </div>
+    <div class="column">
+      <h2>Total: <span class="total">$0</span></h2>
+      <button class="checkout">CHECKOUT</button>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

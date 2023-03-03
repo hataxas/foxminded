@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  background-color: rgb(233, 230, 230);
+  padding: 0 10px;
+}
+
+button {
+  display: inline-flex;
+  background-color: white;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  margin: 50px auto;
+  padding: 40px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add {
+  display: flex;
+  justify-content: space-between;
+}
+
+#add-input {
+  flex: 1 0 auto;
+  background-color: rgb(233, 230, 230);
+  padding: 8px 12px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  font-size: 16px;
+}
+
+#add-button {
+  background-color: rgb(147, 197, 247);
+  padding: 8px 24px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 16px;
+}
+
+#add-button:hover {
+  background-color: rgb(77, 164, 250);
+}
+
+.items {
+  padding: 30px 0 20px;
+}
+
+#clear-items {
+  align-self: center;
+  font-size: 16px;
+  color: red;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+}
+
+#clear-items:hover {
+  color: rgb(144, 8, 8);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  flex: 1 0 auto;
+  padding: 8px 10px;
+}
+
+.edit {
+  padding: 8px 4px;
+  margin-right: 4px;
+}
+
+.delete {
+  padding: 8px 4px;
+  margin-right: 8px;
+}
+
+img:hover {
+  transform: scale(1.2);
+}

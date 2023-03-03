@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+
+.carousel {
+  position: relative;
+  padding-top: 75%;
+  filter: drop-shadow(0 0 2px black);
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  background-size: cover;
+}
+
+#slide1 {
+  background-image: url("images/photo-1.jpeg");
+}
+
+#slide2 {
+  background-image: url("images/photo-2.jpeg");
+}
+
+#slide3 {
+  background-image: url("images/photo-3.jpeg");
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 0;
+  margin: 3px;
+  transition: transform 0.1s;
+
+  &:active, &:hover {
+    background-color: white;
+  }
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 60px;
+  height:  60px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: 0;
+}
+
+.carousel::after,
+.carousel__next {
+  right: 0;
+}
+
+.carousel::before,
+.carousel::after {
+  content: '';
+  z-index: 1;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.carousel::before {
+  background-image: url("images/back_arrow.svg");
+}
+
+.carousel::after {
+  background-image: url("images/forward_arrow.svg");
+}

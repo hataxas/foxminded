@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1",
+    "name" : "MORABO Sofa",
+    "company" : "Ikea",
+    "price" : "1709.00",
+    "imgSrc" : "images/morabo.jpeg"
+  },
+  {
+    "id": "2",
+    "name" : "UPPLAND Sofa",
+    "company" : "Ikea",
+    "price" : "1059.00",
+    "imgSrc" : "images/uppland.jpeg"
+  },
+  {
+    "id": "3",
+    "name" : "KLIPPAN Sofa",
+    "company" : "Ikea",
+    "price" : "499.00",
+    "imgSrc" : "images/klippan.jpeg"
+  },
+  {
+    "id": "4",
+    "name" : "ULRIKSBERG Armchair",
+    "company" : "Ikea",
+    "price" : "119.00",
+    "imgSrc" : "images/ulriksberg.jpeg"
+  },
+  {
+    "id": "5",
+    "name" : "STRANDMON Armchair and ottoman",
+    "company" : "Ikea",
+    "price" : "498.00",
+    "imgSrc" : "images/strandmon.jpeg"
+  },
+  {
+    "id": "6",
+    "name" : "SKOGSTA Dining table",
+    "company" : "Ikea",
+    "price" : "679.00",
+    "imgSrc" : "images/skogsta.jpeg"
+  },
+  {
+    "id": "7",
+    "name" : "INGATORP Dining table",
+    "company" : "Ikea",
+    "price" : "449.00",
+    "imgSrc" : "images/ingatorp.jpeg"
+  },
+  {
+    "id": "8",
+    "name" : "ODGER Chair",
+    "company" : "Ikea",
+    "price" : "109.00",
+    "imgSrc" : "images/odger.jpeg"
+  },
+  {
+    "id": "9",
+    "name" : "NEJEDE Sofa",
+    "company" : "Jysk",
+    "price" : "369.90",
+    "imgSrc" : "images/nejede.jpeg"
+  },
+  {
+    "id": "10",
+    "name" : "BEDSTED Sofa",
+    "company" : "Jysk",
+    "price" : "849.90",
+    "imgSrc" : "images/bedsted.jpeg"
+  },
+  {
+    "id": "11",
+    "name" : "BOESLUNDE Armchair",
+    "company" : "Jysk",
+    "price" : "135.00",
+    "imgSrc" : "images/boeslunde.jpeg"
+  },
+  {
+    "id": "12",
+    "name" : "EJBY Dining table",
+    "company" : "Jysk",
+    "price" : "329.90",
+    "imgSrc" : "images/ejby.jpeg"
+  },
+  {
+    "id": "13",
+    "name" : "3-SITS Sofa",
+    "company" : "XXXLutz",
+    "price" : "159.99",
+    "imgSrc" : "images/sofa.jpeg"
+  },
+  {
+    "id": "14",
+    "name" : "Armchair",
+    "company" : "XXXLutz",
+    "price" : "164.99",
+    "imgSrc" : "images/armchair.jpeg"
+  },
+  {
+    "id": "15",
+    "name" : "Dining table",
+    "company" : "XXXLutz",
+    "price" : "399.99",
+    "imgSrc" : "images/table.jpeg"
+  },
+  {
+    "id": "16",
+    "name" : "Chair",
+    "company" : "XXXLutz",
+    "price" : "169.99",
+    "imgSrc" : "images/chair.jpeg"
+  },
+  {
+    "id": "17",
+    "name" : "MANASOTA Sofa",
+    "company" : "Furniturebox",
+    "price" : "1999.90",
+    "imgSrc" : "images/manasota.jpeg"
+  },
+  {
+    "id": "18",
+    "name" : "TULSA Sofa",
+    "company" : "Furniturebox",
+    "price" : "949.90",
+    "imgSrc" : "images/tulsa.jpeg"
+  },
+  {
+    "id": "19",
+    "name" : "ANDREAS Sofa",
+    "company" : "Furniturebox",
+    "price" : "629.90",
+    "imgSrc" : "images/andreas.jpeg"
+  },
+  {
+    "id": "20",
+    "name" : "ZALE Dining table",
+    "company" : "Furniturebox",
+    "price" : "899.90",
+    "imgSrc" : "images/zale.jpeg"
+  }
+]

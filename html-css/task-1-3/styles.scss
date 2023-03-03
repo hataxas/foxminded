@@ -1,0 +1,268 @@
+@import "nullstyle.scss";
+
+$fontSize: 12px;
+$bg: #3c6475;
+$bg1: #e6e8ea;
+$bg2: #f8f9fa;
+$borderColor: #d4d6d4;
+$textColor: #696c69;
+$labelColor: #54ceb2;
+$placeholderColor: #dddee0;
+$buttonColor: #5ecdb0;
+$sliderRunnableTrackColor: linear-gradient(to top, #9da09d 40%, #767876 100%);
+$sliderRunnableTrackBorderColor: #8a8c8a;
+$sliderThumbColor: linear-gradient(to top, #c7c8c9 40%, #f6f8f9 100%);
+$sliderThumbBorderColor: #8f918f;
+
+body, html {
+  height: 100vh;
+}
+
+body {
+  background-color: $bg;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  color: $textColor;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid $borderColor;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: auto;
+  background-color: $bg1;
+  border-radius: 8px;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid $borderColor;
+}
+
+.content {
+  overflow: auto;
+  background-color: $bg2;
+  padding: 10px 5px 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0 0;
+}
+
+.big-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0 0;
+}
+
+input, .select-wrapper, textarea {
+  display: block;
+  background-color: white;
+  margin: 2px 5px 5px;
+  padding: 6px;
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  font-size: $fontSize;
+}
+
+input[type=file] {
+  border: none;
+  background-color: $bg2;
+  color: $textColor;
+  font-size: 14px;
+  padding: 0;
+
+  &::-webkit-file-upload-button {
+    background-color: white;
+    padding: 4px 6px;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+    font-size: $fontSize;
+  }
+}
+
+input::placeholder {
+  color: $placeholderColor;
+}
+
+label {
+  display: flex;
+  margin: 0 5px;
+  font-size: $fontSize;
+  color: $labelColor;
+}
+
+.radios-and-checkboxes-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.radios, .checkboxes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0 0;
+
+  .radios-wrapper, .checkboxes-wrapper {
+    display: flex;
+  }
+
+  p {
+    display: flex;
+    color: $labelColor;
+    margin: 0 5px 5px;
+    font-size: $fontSize;
+  }
+  input {
+    display: inline;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 1px solid $borderColor;
+    border-radius: 50%;
+    margin: 0 5px;
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+
+    &:checked {
+      background-color: $buttonColor;
+      box-shadow: none;
+    }
+  }
+
+  input[type=checkbox] {
+    border-radius: 2px;
+  }
+
+  label {
+    display: inline;
+    font-size: $fontSize;
+    color: $textColor;
+    margin: 0;
+  }
+}
+
+.select-wrapper {
+  position: relative;
+
+  &::after, &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    right: 5px;
+    pointer-events: none;
+  }
+
+  &::after {
+    border-top: 6px solid #666;
+    bottom: 6px;
+  }
+
+  &::before {
+    border-bottom: 6px solid #666;
+    top: 6px;
+  }
+
+  select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    width: 100%;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+
+  input[type=range] {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 90%;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-runnable-track {
+      background: $sliderRunnableTrackColor;
+      height: 5px;
+      border: 1px inset $sliderRunnableTrackBorderColor;
+      border-radius: 2px;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: $sliderThumbColor;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid $sliderThumbBorderColor;
+      margin: -5px 0 0;
+    }
+  }
+
+  #rangeValue {
+    padding: 5px;
+    margin: 0 0 0 5px;
+    background-color: $buttonColor;
+    color: white;
+    border-radius: 2px;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button-wrapper {
+  border-top: 1px solid $borderColor;
+  padding: 10px;
+  text-align: end;
+
+  button {
+    padding: 7px 14px;
+    background-color: $buttonColor;
+    border-radius: 4px;
+    color: white;
+    font-size: $fontSize;
+  }
+}
+
+@media (min-width: 560px) {
+  .content {
+    padding: 10px 20px 20px;
+  }
+
+  .flex {
+    flex-direction: row;
+  }
+
+  .field {
+    width: 50%;
+  }
+
+  .radios-and-checkboxes-wrapper {
+    flex-direction: row;
+  }
+
+  .button-wrapper {
+    padding: 10px 25px;
+  }
+}
